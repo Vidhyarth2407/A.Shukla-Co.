@@ -1,8 +1,8 @@
 import React from 'react';
 import { useParams } from 'react-router-dom';
 import { motion } from 'framer-motion';
-import { MapPin, CheckCircle, ArrowRight, Zap, Phone } from 'lucide-react';
-import heroImg from '../../assets/hero.png';
+import { MapPin, CheckCircle, ArrowRight, Zap } from 'lucide-react';
+import heroImg from '../../assets/location_hero.png';
 
 const LocationPage = () => {
   const { city } = useParams();
@@ -121,15 +121,12 @@ const LocationPage = () => {
       <section className="bg-primary py-32 md:py-48 text-center relative overflow-hidden">
         <div className="container mx-auto px-6 relative z-10">
            <h2 className="text-5xl md:text-9xl font-black text-secondary mb-12 uppercase tracking-tighter italic leading-none">
-             Partner with the Best <br />in <span className="italic text-transparent text-stroke-2 text-stroke-secondary">{cityName}.</span>
+             Partner with the Best <br />in <span className="text-secondary italic">{cityName}.</span>
            </h2>
            <div className="flex flex-wrap justify-center gap-8">
               <button className="bg-secondary text-white px-16 py-8 rounded-sm font-black uppercase tracking-widest text-xl hover:bg-black transition-all shadow-2xl hover:-translate-y-1">
-                Book Site Visit
+                Contact Us
               </button>
-              <a href="tel:+91XXXXXXXXXX" className="flex items-center gap-4 border-4 border-secondary px-16 py-8 rounded-sm font-black uppercase tracking-widest text-xl hover:bg-secondary hover:text-white transition-all shadow-xl hover:-translate-y-1">
-                <Phone size={24} /> Speak to Expert
-              </a>
            </div>
         </div>
       </section>

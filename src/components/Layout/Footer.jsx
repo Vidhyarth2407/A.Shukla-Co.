@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Mail, Phone, MapPin } from 'lucide-react';
+import { Mail, MapPin } from 'lucide-react';
 import logo from '../../assets/logo.png';
 
 const Footer = () => {
@@ -18,7 +18,7 @@ const Footer = () => {
             </div>
           </Link>
           <p className="text-gray-400 text-sm leading-relaxed">
-            Leading high-tension electrical contracting firm providing specialized solutions for critical industrial infrastructure across India.
+            We provide high-quality and safe electrical systems for India's biggest factories and large organizations.
           </p>
           <div className="flex gap-4">
             <a href="#" className="p-2 bg-secondary-light rounded hover:bg-primary hover:text-secondary transition-all">
@@ -39,9 +39,7 @@ const Footer = () => {
           <ul className="space-y-4">
             <li><Link to="/about" className="text-gray-400 hover:text-primary transition-colors text-sm">About Us</Link></li>
             <li><Link to="/services" className="text-gray-400 hover:text-primary transition-colors text-sm">Our Services</Link></li>
-            <li><Link to="/projects" className="text-gray-400 hover:text-primary transition-colors text-sm">Case Studies</Link></li>
             <li><Link to="/contact" className="text-gray-400 hover:text-primary transition-colors text-sm">Contact Us</Link></li>
-            <li><Link to="/location/kolkata" className="text-gray-400 hover:text-primary transition-colors text-sm">Kolkata Services</Link></li>
           </ul>
         </div>
 
@@ -49,11 +47,11 @@ const Footer = () => {
         <div>
           <h3 className="text-lg font-bold mb-6 border-l-4 border-primary pl-3">Expertise</h3>
           <ul className="space-y-4 text-sm text-gray-400">
-            <li>High-Tension Systems</li>
-            <li>Transformer Infrastructure</li>
-            <li>Industrial Distribution</li>
-            <li>Safety Compliance Audits</li>
-            <li>Electrical Panel Design</li>
+            <li>High-Power Systems</li>
+            <li>Transformer Service</li>
+            <li>Factory Wiring</li>
+            <li>Safety Checks</li>
+            <li>Control Panels</li>
           </ul>
         </div>
 
@@ -63,15 +61,15 @@ const Footer = () => {
           <ul className="space-y-4">
             <li className="flex items-start gap-3 text-sm text-gray-400">
               <MapPin className="text-primary shrink-0" size={18} />
-              <span>123, Industrial Estate, Sector V, Salt Lake, Kolkata, West Bengal</span>
+              <span>Bengaluru: A-207, KSSIDC Complex, Electronics City - 560100</span>
             </li>
-            <li className="flex items-center gap-3 text-sm text-gray-400">
-              <Phone className="text-primary shrink-0" size={18} />
-              <a href="tel:+91XXXXXXXXXX" className="hover:text-primary transition-colors">+91 XXXXX XXXXX</a>
+            <li className="flex items-start gap-3 text-sm text-gray-400">
+              <MapPin className="text-primary shrink-0" size={18} />
+              <span>Kolkata: Ground Floor, #5, Victoria Terrace - 700020</span>
             </li>
             <li className="flex items-center gap-3 text-sm text-gray-400">
               <Mail className="text-primary shrink-0" size={18} />
-              <a href="mailto:info@ashukla.com" className="hover:text-primary transition-colors">info@ashukla.com</a>
+              <a href="mailto:info@ashuklaco.in" className="hover:text-primary transition-colors">info@ashuklaco.in</a>
             </li>
           </ul>
         </div>
