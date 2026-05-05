@@ -24,11 +24,7 @@ const Home = () => {
       desc: 'We design, install, and set up high-power electrical systems to ensure your factory gets reliable power.',
       icon: <Zap size={32} />
     },
-    {
-      title: 'Transformer Installation & Service',
-      desc: 'Complete transformer setup and regular maintenance to keep your operations running without any breaks.',
-      icon: <Settings size={32} />
-    },
+
     {
       title: 'Industrial Electrical Wiring',
       desc: 'Strong and safe wiring solutions built to handle heavy industrial work and keep everyone safe.',
@@ -38,6 +34,11 @@ const Home = () => {
       title: 'Electrical Panels & Controls',
       desc: 'Installing and setting up electrical control panels to manage your power and machines easily.',
       icon: <FileText size={32} />
+    },
+    {
+      title: 'Electrical Safety Checks',
+      desc: 'We check for risks and make sure your building follows all safety rules to protect your team.',
+      icon: <Shield size={32} />
     }
   ];
 
@@ -63,7 +64,7 @@ const Home = () => {
           {/* Enhanced Gradients - Less 'Boxy' */}
           <div className="absolute inset-0 bg-gradient-to-tr from-secondary via-secondary/80 to-transparent"></div>
           <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-secondary/50"></div>
-          
+
           {/* Decorative Elements */}
           <div className="absolute top-1/4 -right-20 w-96 h-96 bg-primary/20 rounded-full blur-[120px] animate-pulse"></div>
           <div className="absolute -bottom-20 -left-20 w-80 h-80 bg-primary/10 rounded-full blur-[100px]"></div>
@@ -107,12 +108,7 @@ const Home = () => {
               transition={{ duration: 1, delay: 0.6 }}
               className="flex flex-wrap gap-6"
             >
-              <button className="btn-primary group">
-                Download Profile 
-                <div className="bg-secondary/10 p-1 rounded-md group-hover:bg-secondary/20 transition-colors">
-                  <FileText size={18} className="group-hover:rotate-12 transition-transform" />
-                </div>
-              </button>
+
               <Link to="/contact" className="btn-outline border-white/30 text-white hover:bg-white hover:text-secondary hover:border-white group">
                 Contact Us <ArrowRight size={18} className="group-hover:translate-x-1 transition-transform" />
               </Link>
@@ -128,10 +124,10 @@ const Home = () => {
             <div key={i} className="flex items-center gap-20">
               {clients.map((client, idx) => (
                 <div key={idx} className="flex items-center gap-10 group">
-                  <img 
-                    src={client.logo} 
-                    alt={client.name} 
-                    className="h-12 md:h-16 w-auto object-contain transition-all duration-500 group-hover:scale-110 drop-shadow-md" 
+                  <img
+                    src={client.logo}
+                    alt={client.name}
+                    className="h-12 md:h-16 w-auto object-contain transition-all duration-500 group-hover:scale-110 drop-shadow-md"
                   />
                   <span className="text-secondary/10 text-5xl font-thin">|</span>
                 </div>
@@ -218,12 +214,11 @@ const Home = () => {
       </section>
 
       {/* Why Choose Us */}
-      <section className="bg-secondary py-32 md:py-48 text-white">
+      <section id="why-choose-us" className="bg-secondary py-32 md:py-48 text-white">
         <div className="container mx-auto px-6 grid lg:grid-cols-12 gap-20 items-center">
           <div className="lg:col-span-5">
-            <motion.h2 {...fadeInUp} className="text-5xl md:text-7xl font-black mb-12 leading-none uppercase tracking-tighter">
-              Why Industry <br />
-              Leaders <span className="text-primary italic">Choose Us.</span>
+            <motion.h2 {...fadeInUp} className="text-5xl md:text-7xl font-black mb-12 leading-none uppercase tracking-tighter text-white">
+              Why <span className="text-primary italic">choose Us.</span>
             </motion.h2>
             <div className="space-y-12">
               {[
@@ -364,8 +359,6 @@ const Home = () => {
           </motion.div>
         </div>
       </section>
-
-
     </div>
   );
 };

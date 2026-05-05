@@ -20,7 +20,7 @@ const Footer = () => {
           <p className="text-gray-400 text-sm leading-relaxed">
             We provide high-quality and safe electrical systems for India's biggest factories and large organizations.
           </p>
-          <div className="flex gap-4">
+          {/* <div className="flex gap-4">
             <a href="#" className="p-2 bg-secondary-light rounded hover:bg-primary hover:text-secondary transition-all">
               <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path></svg>
             </a>
@@ -30,12 +30,12 @@ const Footer = () => {
             <a href="#" className="p-2 bg-secondary-light rounded hover:bg-primary hover:text-secondary transition-all">
               <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M22 4s-.7 2.1-2 3.4c1.6 10-9.4 17.3-18 11.6 2.2.1 4.4-.6 6-2C3 15.5.5 9.6 3 5c2.2 2.6 5.6 4.1 9 4-.9-4.2 4-6.6 7-3.8 1.1 0 3-1.2 3-1.2z"></path></svg>
             </a>
-          </div>
+          </div> */}
         </div>
 
         {/* Quick Links */}
         <div>
-          <h3 className="text-lg font-bold mb-6 border-l-4 border-primary pl-3">Quick Links</h3>
+          <h3 className="text-lg font-bold mb-6 border-l-4 text-white border-primary pl-3">Quick Links</h3>
           <ul className="space-y-4">
             <li><Link to="/about" className="text-gray-400 hover:text-primary transition-colors text-sm">About Us</Link></li>
             <li><Link to="/services" className="text-gray-400 hover:text-primary transition-colors text-sm">Our Services</Link></li>
@@ -45,10 +45,10 @@ const Footer = () => {
 
         {/* Services */}
         <div>
-          <h3 className="text-lg font-bold mb-6 border-l-4 border-primary pl-3">Expertise</h3>
+          <h3 className="text-lg font-bold mb-6 border-l-4 text-white border-primary pl-3">Expertise</h3>
           <ul className="space-y-4 text-sm text-gray-400">
             <li>High-Power Systems</li>
-            <li>Transformer Service</li>
+
             <li>Factory Wiring</li>
             <li>Safety Checks</li>
             <li>Control Panels</li>
@@ -57,7 +57,7 @@ const Footer = () => {
 
         {/* Contact Info */}
         <div>
-          <h3 className="text-lg font-bold mb-6 border-l-4 border-primary pl-3">Get In Touch</h3>
+          <h3 className="text-lg font-bold mb-6 border-l-4 text-white border-primary pl-3">Get In Touch</h3>
           <ul className="space-y-4">
             <li className="flex items-start gap-3 text-sm text-gray-400">
               <MapPin className="text-primary shrink-0" size={18} />

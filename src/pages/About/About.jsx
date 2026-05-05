@@ -18,9 +18,9 @@ const About = () => {
       <section className="relative bg-secondary text-white py-32 md:py-48 overflow-hidden">
         {/* Background Image with Overlay */}
         <div className="absolute inset-0 z-0">
-          <img 
-            src={aboutImg} 
-            alt="Modern Industrial Power" 
+          <img
+            src={aboutImg}
+            alt="Modern Industrial Power"
             className="w-full h-full object-cover opacity-30 mix-blend-overlay"
           />
           <div className="absolute inset-0 bg-gradient-to-b from-secondary via-secondary/80 to-secondary"></div>
@@ -28,9 +28,9 @@ const About = () => {
 
         <div className="container mx-auto px-6 relative z-10 text-center">
           <motion.div
-             initial={{ opacity: 0, y: 30 }}
-             animate={{ opacity: 1, y: 0 }}
-             transition={{ duration: 1 }}
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 1 }}
           >
             <h1 className="text-4xl sm:text-6xl md:text-8xl font-black mb-8 uppercase tracking-tighter leading-[0.8] italic text-white">
               Electrical <br />
@@ -71,7 +71,7 @@ const About = () => {
       <section className="bg-secondary py-24 md:py-32 text-white relative overflow-hidden">
         <div className="container mx-auto px-6">
           <div className="grid md:grid-cols-2 gap-12 relative z-10">
-            <motion.div 
+            <motion.div
               whileHover={{ y: -10 }}
               className="bg-white/5 backdrop-blur-xl p-12 rounded-3xl border border-white/10 group overflow-hidden"
             >
@@ -83,7 +83,7 @@ const About = () => {
                 To build safe, efficient, and modern electrical systems that help factories grow while always doing the best quality work.
               </p>
             </motion.div>
-            <motion.div 
+            <motion.div
               whileHover={{ y: -10 }}
               className="bg-primary p-12 rounded-3xl group border border-primary overflow-hidden"
             >
@@ -111,8 +111,8 @@ const About = () => {
             { icon: <Target />, title: "Power Stations" },
             { icon: <ShieldCheck />, title: "Safety Checks" }
           ].map((item, i) => (
-            <motion.div 
-              key={i} 
+            <motion.div
+              key={i}
               {...fadeInUp}
               transition={{ delay: i * 0.1 }}
               className="text-center group p-8 md:p-10 rounded-3xl hover:bg-gray-50 transition-all border border-transparent hover:border-gray-100"

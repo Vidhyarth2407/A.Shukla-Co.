@@ -64,7 +64,7 @@ const LocationPage = () => {
                   "Quick mobilization of resources in " + cityName,
                   "Compliance with state electricity board standards",
                   "24/7 technical support for regional industrial zones",
-                  "Complete HT substation & transformer solutions"
+                  "Complete HT substation & distribution solutions"
                 ].map((item, i) => (
                   <div key={i} className="flex items-start gap-5 group">
                     <div className="bg-primary/10 p-2 rounded-full text-primary group-hover:bg-primary group-hover:text-secondary transition-all">

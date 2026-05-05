@@ -2,8 +2,8 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { Zap, Settings, Shield, PanelTop, CheckCircle, ArrowRight } from 'lucide-react';
-import transformerImg1 from '../../assets/transformer_installation.png';
-import transformerImg2 from '../../assets/services_transformer_2.png';
+
+
 import panelImg1 from '../../assets/services_panel_1.png';
 import panelImg2 from '../../assets/services_panel_2.png';
 import industrialWiringImg from '../../assets/industrial_wiring.png';
@@ -25,13 +25,7 @@ const Services = () => {
       icon: <Zap size={48} />,
       img: heroImg
     },
-    {
-      title: "Transformer Installation",
-      desc: "Complete transformer setup and regular service to keep your power running without any breaks.",
-      features: ["Main Transformers", "Power Distribution", "Oil Testing", "Cleaning Services"],
-      icon: <Settings size={48} />,
-      img: transformerImg1
-    },
+
     {
       title: "Industrial Wiring",
       desc: "Strong and safe wiring built for heavy factory work and dangerous environments.",
@@ -63,7 +57,7 @@ const Services = () => {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
           >
-            <h1 className="text-3xl sm:text-5xl md:text-7xl font-black mb-8 uppercase tracking-tighter leading-[0.8] italic text-white">
+            <h1 className="text-3xl sm:text-5xl md:text-7xl font-black mb-8 pt-12 uppercase tracking-tighter leading-[0.8] italic text-white">
               Power <br />
               <span className="text-primary italic">Solutions</span>
             </h1>
@@ -79,41 +73,41 @@ const Services = () => {
         <section key={i} className={`py-20 md:py-28 ${i % 2 === 0 ? 'bg-white' : 'bg-gray-50'} relative overflow-hidden`}>
           <div className="container mx-auto px-6">
             <div className={`grid lg:grid-cols-2 gap-24 items-center ${i % 2 !== 0 ? 'lg:flex-row-reverse' : ''}`}>
-               <motion.div 
-                 {...fadeInUp}
-                 className={i % 2 !== 0 ? 'lg:order-2' : ''}
-               >
-                 <div className="flex items-center gap-6 mb-10">
-                    <div className="h-20 w-20 flex items-center justify-center bg-primary text-secondary rounded-2xl shadow-xl shadow-primary/20">
-                      {service.icon}
+              <motion.div
+                {...fadeInUp}
+                className={i % 2 !== 0 ? 'lg:order-2' : ''}
+              >
+                <div className="flex items-center gap-6 mb-10">
+                  <div className="h-20 w-20 flex items-center justify-center bg-primary text-secondary rounded-2xl shadow-xl shadow-primary/20">
+                    {service.icon}
+                  </div>
+                  <div className="h-px w-20 bg-primary/30 hidden md:block"></div>
+                </div>
+                <h2 className="text-3xl md:text-6xl font-black mb-8 uppercase tracking-tighter leading-none">{service.title}</h2>
+                <p className="text-xl text-gray-500 mb-10 leading-relaxed font-light">{service.desc}</p>
+                <div className="grid sm:grid-cols-2 gap-6 mb-12">
+                  {service.features.map((feature, idx) => (
+                    <div key={idx} className="flex items-center gap-4 bg-white p-4 rounded-xl border border-gray-100 shadow-sm group hover:border-primary/50 transition-colors">
+                      <CheckCircle size={20} className="text-primary" />
+                      <span className="text-secondary font-bold text-sm uppercase tracking-tight">{feature}</span>
                     </div>
-                    <div className="h-px w-20 bg-primary/30 hidden md:block"></div>
-                 </div>
-                 <h2 className="text-3xl md:text-6xl font-black mb-8 uppercase tracking-tighter leading-none">{service.title}</h2>
-                 <p className="text-xl text-gray-500 mb-10 leading-relaxed font-light">{service.desc}</p>
-                 <div className="grid sm:grid-cols-2 gap-6 mb-12">
-                   {service.features.map((feature, idx) => (
-                     <div key={idx} className="flex items-center gap-4 bg-white p-4 rounded-xl border border-gray-100 shadow-sm group hover:border-primary/50 transition-colors">
-                       <CheckCircle size={20} className="text-primary" />
-                       <span className="text-secondary font-bold text-sm uppercase tracking-tight">{feature}</span>
-                     </div>
-                   ))}
-                 </div>
-                  <Link to="/contact" className="btn-primary group inline-flex">
-                     Contact Us <ArrowRight size={18} className="group-hover:translate-x-1 transition-transform" />
-                  </Link>
-               </motion.div>
-               
-               <motion.div 
-                 initial={{ opacity: 0, x: i % 2 === 0 ? 50 : -50 }}
-                 whileInView={{ opacity: 1, x: 0 }}
-                 viewport={{ once: true }}
-                 className={`relative group ${i % 2 !== 0 ? 'lg:order-1' : ''}`}
-               >
-                 <div className="absolute -inset-6 border-8 border-primary/10 rounded-[3rem] transform rotate-3 transition-transform group-hover:rotate-0"></div>
-                 <img src={service.img} alt={service.title} className="relative z-10 rounded-[2.5rem] shadow-2xl object-cover h-[500px] w-full grayscale hover:grayscale-0 transition-all duration-700" />
-                 <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-40 h-40 bg-primary rounded-full blur-[80px] opacity-0 group-hover:opacity-20 transition-opacity"></div>
-               </motion.div>
+                  ))}
+                </div>
+                <Link to="/contact" className="btn-primary group inline-flex">
+                  Contact Us <ArrowRight size={18} className="group-hover:translate-x-1 transition-transform" />
+                </Link>
+              </motion.div>
+
+              <motion.div
+                initial={{ opacity: 0, x: i % 2 === 0 ? 50 : -50 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                viewport={{ once: true }}
+                className={`relative group ${i % 2 !== 0 ? 'lg:order-1' : ''}`}
+              >
+                <div className="absolute -inset-6 border-8 border-primary/10 rounded-[3rem] transform rotate-3 transition-transform group-hover:rotate-0"></div>
+                <img src={service.img} alt={service.title} className="relative z-10 rounded-[2.5rem] shadow-2xl object-cover h-[500px] w-full grayscale hover:grayscale-0 transition-all duration-700" />
+                <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-40 h-40 bg-primary rounded-full blur-[80px] opacity-0 group-hover:opacity-20 transition-opacity"></div>
+              </motion.div>
             </div>
           </div>
         </section>
@@ -121,7 +115,7 @@ const Services = () => {
 
       <section className="bg-primary py-24 md:py-32 text-center relative overflow-hidden">
         <div className="absolute top-0 left-0 w-full h-full animate-pulse opacity-10">
-           <Zap size={400} className="absolute -top-20 -left-20 text-secondary" />
+          <Zap size={400} className="absolute -top-20 -left-20 text-secondary" />
         </div>
         <div className="container mx-auto px-6 relative z-10">
           <h2 className="text-2xl sm:text-6xl md:text-8xl font-black mb-12 uppercase tracking-tighter text-secondary leading-none">Need a Custom <br /><span className="text-secondary italic">Safety Check?</span></h2>

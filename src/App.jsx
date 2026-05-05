@@ -9,6 +9,8 @@ import About from './pages/About/About';
 import Services from './pages/Services/Services';
 import Contact from './pages/Contact/Contact';
 import LocationPage from './pages/Location/LocationPage';
+import Lala from './junk/lala.tsx';
+
 
 function App() {
   return (
@@ -23,6 +25,7 @@ function App() {
             <Route path="/services" element={<Services />} />
             <Route path="/contact" element={<Contact />} />
             <Route path="/location/:city" element={<LocationPage />} />
+            <Route path="/lala" element={<Lala />} />
           </Routes>
         </main>
         <Footer />

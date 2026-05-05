@@ -38,7 +38,7 @@ const Header = () => {
             <h1 className="text-xl md:text-2xl font-black uppercase tracking-tighter leading-none transition-colors duration-300 text-secondary">
               A. Shukla <span className="text-primary italic">& Co.</span>
             </h1>
-            <p className="text-[10px] text-primary font-bold tracking-[0.2em] uppercase opacity-80 leading-none mt-1">High-Tension Specialist</p>
+            <p className="text-[10px] text-primary font-bold tracking-[0.2em] uppercase opacity-80 leading-none mt-1">Electrical Contractors and Engineers</p>
           </div>
         </Link>
 
